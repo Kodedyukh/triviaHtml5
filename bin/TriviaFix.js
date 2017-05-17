@@ -215,7 +215,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "980", company : "KpDed", file : "TriviaFix", fps : 60, name : "Trivia", orientation : "", packageName : "com.kpded.trivia", version : "0.9.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 800, parameters : "{}", resizable : false, stencilBuffer : true, title : "Trivia", vsync : true, width : 800, x : null, y : null}]};
+	ApplicationMain.config = { build : "981", company : "KpDed", file : "TriviaFix", fps : 60, name : "Trivia", orientation : "", packageName : "com.kpded.trivia", version : "0.9.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 800, parameters : "{}", resizable : false, stencilBuffer : true, title : "Trivia", vsync : true, width : 800, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -5503,7 +5503,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 					this.ballSource.setSkin(this.nextBallSkin);
 					this.ballSource.setCenterPos(this.nextBallPos);
 					this.ballSource.revive();
-					haxe_Log.trace("zero length",{ fileName : "PlayState.hx", lineNumber : 294, className : "PlayState", methodName : "update"});
 				} else {
 					this.balls.group.forEachOfType(Ball,$bind(this,this.checkBallOut),false);
 					this.balls.group.forEachOfType(Ball,$bind(this,this.checkBallBorder),false);
@@ -5592,7 +5591,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 				this.ballSource.setSkin(this.nextBallSkin);
 				this.ballSource.setCenterPos(this.nextBallPos);
 				this.ballSource.revive();
-				haxe_Log.trace("ball is out",{ fileName : "PlayState.hx", lineNumber : 447, className : "PlayState", methodName : "checkBallOut"});
 			}
 		} else ball.passOuterRadius = true;
 	}
@@ -5715,7 +5713,6 @@ PlayState.prototype = $extend(flixel_FlxState.prototype,{
 			this.ballSource.setSkin(this.nextBallSkin);
 			this.ballSource.setCenterPos(this.nextBallPos);
 			this.ballSource.revive();
-			haxe_Log.trace("collision",{ fileName : "PlayState.hx", lineNumber : 599, className : "PlayState", methodName : "checkCollision"});
 		}
 	}
 	,updateMaxRadius: function() {

@@ -13,6 +13,15 @@
   </style>
  </head>
  <body>
-  <iframe id="game-frame" frameborder="0" src="bin/index.html" style="width: 800px; height: 800px;"></iframe>  
+  <iframe id="bannerLeft-id" frameborder="0" src="" style="width: 180px; height: 700px;" align="left"></iframe>
+  <iframe id="bannerRight-id" frameborder="0" src="" style="width: 180px; height: 700px;" align="right"></iframe>
+  <iframe id="game-frame" frameborder="1" src="bin/index.html" style="width: 800px; height: 800px;"></iframe>
+  <script type="text/javascript">
+	var timeInt = 300000;
+	setTimeout( function showAd(){
+	document.getElementById("bannerLeft-id").src = "bannerLeft.html";
+	document.getElementById("bannerRight-id").src = "bannerRight.html";
+	}, timeInt);  
+  </script>  
  </body>
 </html>

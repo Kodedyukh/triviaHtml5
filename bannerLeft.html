@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="//ads.lfstmedia.com/getad?site=287963" type="text/javascript"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var timeInt = 300000;
+			var adSlot;
+			//<![CDATA[
+				adSlot = LSM_Slot({
+					adkey: '9e8',
+					ad_size: '160x600',
+					slot: 'slot174436',
+					_guard: true
+				});
+			//]]>			
+			function reloadAd()
+			{
+				adSlot.reload();
+				var timerId = setTimeout(reloadAd, timeInt);
+			}
+			var timerIdReload = setTimeout(reloadAd, timeInt);
+		</script>
+	</body>
+</html>
